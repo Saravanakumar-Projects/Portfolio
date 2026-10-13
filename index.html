@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Saravanakumar V | Python Backend & Full Stack Engineer</title>
+<meta name="description" content="Full Stack Engineer specializing in Python, FastAPI, PostgreSQL, multi-tenant SaaS and AI/LLM applications. Case studies, impact and contact.">
+<meta property="og:title" content="Saravanakumar V | Python Backend & Full Stack Engineer">
+<meta property="og:description" content="Backend systems that solve real-world problems: FastAPI, PostgreSQL, Celery, WebSockets, LLM workflows.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0c0d0c">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0c0d0c;--bg2:#131513;--fg:#f1efe8;--mut:#9a9d95;--line:#262a26;--acc:#c6ff3d;--accd:#0c0d0c;
+--serif:'Instrument Serif',Georgia,serif;--sans:'Inter',system-ui,sans-serif;--mono:'JetBrains Mono',ui-monospace,monospace;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 var(--sans);overflow-x:hidden;
+background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;background-attachment:fixed}
+body:has(dialog[open]){overflow:hidden}
+body::before{content:"";position:fixed;inset:0;background:radial-gradient(ellipse at 70% 0,transparent,var(--bg) 75%);pointer-events:none;z-index:-1}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 clamp(18px,4vw,40px)}
+section{padding:clamp(64px,10vw,120px) 0;border-top:1px solid var(--line)}
+.lab{font:500 12px var(--mono);letter-spacing:.14em;color:var(--acc);text-transform:uppercase;margin:0 0 14px}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.05;margin:0}
+h1{font-size:clamp(44px,8vw,92px);letter-spacing:-.02em}
+h2{font-size:clamp(34px,5vw,58px);margin-bottom:28px;max-width:16em}
+em{color:var(--acc);font-style:italic}
+p{margin:0 0 1em}.mut{color:var(--mut)}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(12,13,12,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font:500 14px var(--mono);text-decoration:none}
+.links{display:flex;gap:6px}.links a{font-size:14px;text-decoration:none;color:var(--mut);padding:8px 12px;border-radius:6px}
+.links a:hover,.links a.on{color:var(--fg)}.links a.on{box-shadow:inset 0 -2px var(--acc)}
+#burger{display:none;background:none;border:1px solid var(--line);color:var(--fg);border-radius:6px;width:44px;height:44px;font-size:20px;cursor:pointer}
+@media(max-width:760px){#burger{display:block}.links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 18px}.links.open{display:flex}.links a{padding:14px 8px}}
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:46px;padding:0 22px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none;border:1px solid var(--line);background:none;color:var(--fg);cursor:pointer;font-family:inherit}
+.btn.p{background:var(--acc);color:var(--accd);border-color:var(--acc)}.btn:hover{border-color:var(--acc)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;border:0;padding-top:clamp(48px,8vw,100px)}
+@media(max-width:900px){.hero{grid-template-columns:1fr}}
+.hero p.lead{font-size:18px;color:var(--mut);max-width:34em;margin:24px 0}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:28px}
+.facts{display:flex;flex-wrap:wrap;gap:8px 20px;list-style:none;padding:0;margin:0;font:12px var(--mono);color:var(--mut)}
+.facts li::before{content:"+ ";color:var(--acc)}
+.panel{border:1px solid var(--line);background:var(--bg2);border-radius:10px;padding:18px}
+.panel .cap{font:11px var(--mono);color:var(--mut);margin-bottom:10px;display:flex;justify-content:space-between}
+.flow{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px 4px;margin:14px 0}
+.flow .arr{align-self:center;color:var(--acc);font-family:var(--mono)}
+.node{background:var(--bg);border:1px solid var(--line);color:var(--fg);padding:10px 12px;border-radius:8px;font:500 13px var(--mono);cursor:pointer;text-align:left;transition:all .25s}
+.node:hover,.node[aria-pressed=true]{border-color:var(--acc);color:var(--acc)}
+.node[aria-pressed=true]{box-shadow:0 0 0 3px rgba(198,255,61,.18);transform:translateY(-2px)}
+.note{font-size:14px;color:var(--mut);min-height:3.4em;border-left:2px solid var(--acc);padding-left:12px;margin:10px 0 0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,64px)}
+@media(max-width:800px){.two{grid-template-columns:1fr}}
+ol.how{padding-left:0;list-style:none;counter-reset:n;margin:0}
+ol.how li{counter-increment:n;border-top:1px solid var(--line);padding:14px 0 14px 44px;position:relative}
+ol.how li::before{content:"0" counter(n);position:absolute;left:0;font:12px var(--mono);color:var(--acc);top:18px}
+.impact{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line)}
+@media(max-width:900px){.impact{grid-template-columns:1fr 1fr}}@media(max-width:520px){.impact{grid-template-columns:1fr}}
+.impact>div{padding:26px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);margin:0 -1px -1px 0;background:rgba(12,13,12,.6)}
+.big{font:clamp(34px,4vw,48px)/1 var(--serif);color:var(--acc)}.impact h3{font:600 15px var(--sans);margin:12px 0 6px}.impact p{font-size:14px;color:var(--mut);margin:0}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+.filters button{min-height:40px;padding:0 16px;border-radius:999px;border:1px solid var(--line);background:none;color:var(--mut);cursor:pointer;font:13px var(--mono)}
+.filters button[aria-pressed=true]{color:var(--accd);background:var(--acc);border-color:var(--acc)}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}@media(max-width:800px){.grid{grid-template-columns:1fr}}
+.card{position:relative;overflow:hidden;border:1px solid var(--line);background:var(--bg2);border-radius:10px;padding:24px;display:flex;flex-direction:column;gap:12px;transition:transform .25s,border-color .25s}
+.card:hover{transform:translateY(-3px);border-color:var(--acc)}
+.card::before{content:"";position:absolute;inset:0;background:radial-gradient(260px circle at var(--mx,50%) var(--my,0),rgba(198,255,61,.12),transparent 60%);opacity:0;transition:opacity .3s;pointer-events:none}.card:hover::before{opacity:1}
+.card .no{font:12px var(--mono);color:var(--acc)}.card h3{font-size:30px}.card p{color:var(--mut);margin:0;font-size:15px}
+.tag{display:inline-block;font:11px var(--mono);border:1px solid var(--line);padding:3px 8px;border-radius:4px;color:var(--mut);margin:0 6px 6px 0;transition:all .2s}
+.tag:hover{border-color:var(--acc);color:var(--acc);transform:translateY(-2px)}
+.badge{font:11px var(--mono);color:var(--accd);background:var(--acc);padding:2px 8px;border-radius:4px;align-self:flex-start}
+.card .btn{align-self:flex-start;margin-top:auto}
+dialog{background:var(--bg);color:var(--fg);border:1px solid var(--line);border-radius:12px;width:min(880px,94vw);max-height:90vh;padding:0}
+dialog::backdrop{background:rgba(0,0,0,.75)}
+.dh{position:sticky;top:0;background:var(--bg);display:flex;justify-content:space-between;align-items:center;padding:14px 24px;border-bottom:1px solid var(--line);z-index:1}
+.db{padding:24px}.db h3{font:600 13px var(--mono);color:var(--acc);text-transform:uppercase;letter-spacing:.1em;margin:26px 0 8px}.db h2{font-size:38px;margin-bottom:10px}
+.db ul{padding-left:20px;margin:0}.db li{margin-bottom:6px}
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line)}
+@media(max-width:900px){.skills{grid-template-columns:1fr 1fr}}@media(max-width:560px){.skills{grid-template-columns:1fr}}
+.skills>div{padding:22px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);margin:0 -1px -1px 0}
+.skills h3{font:600 14px var(--sans);margin-bottom:12px}.skills .core{color:var(--fg);border-color:#4a5a2a}
+.tl{border-left:1px solid var(--line);padding-left:28px;position:relative}
+.tl::before{content:"";position:absolute;left:-5px;top:8px;width:9px;height:9px;background:var(--acc);border-radius:50%}
+.tl ul{padding-left:20px}.tl li{margin-bottom:6px;color:var(--mut)}
+.awards{display:grid;grid-template-columns:1fr 1fr;gap:16px}@media(max-width:700px){.awards{grid-template-columns:1fr}}
+.award{border:1px solid var(--line);padding:24px;border-radius:10px;background:var(--bg2)}.award .y{font:12px var(--mono);color:var(--acc)}.award h3{font-size:28px;margin:6px 0}
+.notes{list-style:none;padding:0;margin:0}.notes li{display:flex;gap:16px;justify-content:space-between;align-items:center;padding:16px 0;border-top:1px solid var(--line)}
+.notes span.s{font:11px var(--mono);color:var(--mut);white-space:nowrap}
+footer{border-top:1px solid var(--line);padding:40px 0;color:var(--mut);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px 40px;justify-content:space-between}footer a{margin-right:16px}
+.rv{opacity:0;transform:translateY(14px);transition:opacity .6s,transform .6s}.rv.in{opacity:1;transform:none}
+@keyframes dash{to{stroke-dashoffset:-20}}.pulse{stroke-dasharray:4 6;animation:dash 1.4s linear infinite}
+#prog{position:fixed;top:0;left:0;height:3px;width:0;background:var(--acc);z-index:50}
+.rv-load{opacity:0;animation:up .8s forwards}
+@keyframes up{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+h1 em{background:linear-gradient(var(--acc),var(--acc)) 0 100%/0 3px no-repeat;animation:ul 1.1s .9s forwards}
+@keyframes ul{to{background-size:100% 3px}}
+.status{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:999px;padding:6px 14px;font:12px var(--mono);color:var(--fg);margin-bottom:20px;background:var(--bg2)}
+.status i{width:8px;height:8px;border-radius:50%;background:var(--acc);animation:bl 1.6s infinite}
+@keyframes bl{0%{box-shadow:0 0 0 0 rgba(198,255,61,.6)}100%{box-shadow:0 0 0 10px rgba(198,255,61,0)}}
+.plain{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}@media(max-width:800px){.plain{grid-template-columns:1fr}}
+.plain>div{border:1px solid var(--line);background:var(--bg2);border-radius:10px;padding:24px;transition:transform .25s,border-color .25s,box-shadow .25s}
+.plain>div:hover{transform:translateY(-5px);border-color:var(--acc);box-shadow:0 12px 40px -18px var(--acc)}
+.plain .ic{font:500 13px var(--mono);color:var(--acc)}.plain h3{font-size:28px;margin:8px 0}.plain p{color:var(--mut);margin:0;font-size:15px}
+.rv.in .card,.rv.in .award,.rv.in .impact>div,.rv.in .skills>div,.rv.in .plain>div{animation:up .7s backwards}
+.rv.in .impact>div:nth-child(2),.rv.in .skills>div:nth-child(2),.rv.in .plain>div:nth-child(2),.rv.in .award:nth-child(2),.rv.in .card:nth-child(2){animation-delay:.12s}
+.rv.in .impact>div:nth-child(3),.rv.in .skills>div:nth-child(3),.rv.in .plain>div:nth-child(3),.rv.in .card:nth-child(3){animation-delay:.24s}
+.rv.in .impact>div:nth-child(4),.rv.in .skills>div:nth-child(4),.rv.in .card:nth-child(4){animation-delay:.36s}
+.ln{display:block;overflow:hidden;padding-bottom:.08em}.ln>span{display:block;animation:lnr 1s cubic-bezier(.2,.7,.2,1) backwards}.ln:nth-child(2)>span{animation-delay:.15s}.ln:nth-child(3)>span{animation-delay:.3s}
+@keyframes lnr{from{transform:translateY(105%)}}
+.tg{display:flex;gap:6px;margin-bottom:8px}.tg button{flex:1;min-height:40px;border:1px solid var(--line);background:none;color:var(--mut);border-radius:6px;font:12px var(--mono);cursor:pointer}.tg button[aria-pressed=true]{background:var(--acc);color:var(--accd);border-color:var(--acc)}
+.pn{display:flex;justify-content:space-between;gap:10px;margin-top:10px}.sim{background:var(--bg2);border:1px solid var(--line);border-radius:8px;padding:14px;font:12px/1.7 var(--mono);white-space:pre-wrap;min-height:5em;margin-top:10px;color:var(--mut)}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}html{scroll-behavior:auto}.rv,.rv-load{opacity:1!important;transform:none!important}.pk{display:none}}
+</style></head><body><div id="prog" aria-hidden="true"></div>
+<nav aria-label="Primary"><div class="wrap"><a class="logo" href="#home">Saravanakumar</a>
+<button id="burger" aria-label="Toggle menu" aria-expanded="false" aria-controls="links">☰</button>
+<div class="links" id="links"><a href="#home">Home</a><a href="#about">About</a><a href="#work">Work</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#contact">Contact</a></div></div></nav>
+<main>
+<section class="hero wrap" id="home">
+<div class="rv-load"><span class="status"><i></i>Open to Python Backend · Full Stack · AI roles</span><p class="lab">Full Stack Engineer · Python · AI Systems</p>
+<h1><span class="ln"><span>I build</span></span><span class="ln"><span><em>backend systems</em></span></span><span class="ln"><span>that solve real-world problems.</span></span></h1>
+<p class="lead">I'm Saravanakumar, a Full Stack Engineer focused on Python, FastAPI, PostgreSQL, and AI-powered applications. I build production SaaS platforms, reliable APIs, asynchronous workflows, and intelligent application features — from technical planning to production delivery.</p>
+<div class="cta"><a class="btn p" href="#work">Explore My Work →</a><a class="btn" href="#contact">Let's Connect</a>
+<a class="btn" id="resumeBtn" hidden download>Download Resume</a></div>
+<ul class="facts"><li><span data-years></span> years professional experience</li><li>Production SaaS experience</li><li>Technical ownership &amp; team leadership</li><li>Backend &amp; AI/LLM workflows</li></ul></div>
+<div class="panel rv-load" style="animation-delay:.3s" aria-label="Interactive system diagram">
+<div class="cap"><span>architecture visualization (illustrative)</span><span>click a node</span></div><div class="tg" role="group" aria-label="Diagram view"><button aria-pressed="true" data-v="s">SaaS Architecture</button><button aria-pressed="false" data-v="a">AI Workflow</button></div>
+<svg id="saasSvg" viewBox="0 0 400 310" width="100%" role="img" aria-label="Diagram: clients to FastAPI, then PostgreSQL, Redis, Celery workers and an LLM workflow" style="display:block">
+<g fill="none" stroke="#3a403a"><path d="M200 58V112M200 148L90 207M200 148V207M200 148L310 207M310 243V267"/></g>
+<path class="pulse" d="M200 58V112M200 148L90 207M200 148L310 207" fill="none" stroke="#c6ff3d" stroke-width="1.5"/>
+<g fill="#c6ff3d" class="pk"><circle r="4"><animateMotion dur="1.6s" repeatCount="indefinite" path="M200 58V112"/></circle><circle r="4"><animateMotion dur="2s" begin=".5s" repeatCount="indefinite" path="M200 148L90 207"/></circle><circle r="4"><animateMotion dur="1.8s" begin=".9s" repeatCount="indefinite" path="M200 148V207"/></circle><circle r="4"><animateMotion dur="2.2s" begin=".3s" repeatCount="indefinite" path="M200 148L310 207"/></circle><circle r="4"><animateMotion dur="1.4s" begin="1s" repeatCount="indefinite" path="M310 243V267"/></circle></g>
+<g font-family="JetBrains Mono,monospace" font-size="12" text-anchor="middle" id="svgNodes"></g></svg>
+<svg id="aiSvg" viewBox="0 0 400 310" width="100%" role="img" aria-label="AI workflow: user input, context retrieval, LLM, validation, response" style="display:none"></svg>
+<p class="note" id="heroNote">Select a component to see how it fits.</p></div>
+</section>
+
+<section id="plain" style="padding-top:0;border:0"><div class="wrap rv"><p class="lab">In plain English</p><h2 style="font-size:clamp(30px,4vw,46px)">What I actually <em>do for a team.</em></h2>
+<div class="plain"><div><span class="ic">01 / BUILD</span><h3>I build the engine behind apps</h3><p>The APIs and databases that web and mobile apps depend on, built with Python, FastAPI and PostgreSQL.</p></div><div><span class="ic">02 / SPEED UP</span><h3>I make slow things faster</h3><p>Caching and background jobs: about 30% lower query latency and about 20% less manual reporting effort.</p></div><div><span class="ic">03 / AI</span><h3>I add AI to real products</h3><p>LLM workflows with LangChain and LangGraph, such as letting people ask questions of their data in plain language.</p></div></div></div></section>
+<section id="impact"><div class="wrap rv"><p class="lab">Engineering Impact</p><h2>The work should speak for <em>itself.</em></h2>
+<div class="impact" id="impactGrid"></div>
+<p class="mut" style="font-size:13px;margin-top:14px">Figures are self-reported from my own work and have not been independently audited or benchmarked.</p></div></section>
+
+<section id="about"><div class="wrap two rv"><div><p class="lab">About me</p><h2>Engineering with ownership, <em>not just implementation.</em></h2></div>
+<div><p>I'm a Full Stack Engineer at Cogniwide, working primarily with Python, FastAPI, PostgreSQL, Redis, Celery, React, and AI/LLM technologies.</p>
+<p>My work goes beyond implementing individual features. I take technical ownership of projects, lead a four-member engineering team, and contribute throughout the development lifecycle — from understanding requirements and planning solutions to implementation, troubleshooting, and production delivery.</p>
+<p>I've worked on production multi-tenant SaaS systems, database optimization, asynchronous processing, real-time application features, and LLM-powered workflows. I care about building software that is maintainable, reliable, and useful to the people who depend on it.</p>
+<p>I enjoy understanding the underlying problem, choosing a practical technical solution, and delivering software that creates measurable value.</p>
+<p class="lab" style="margin-top:32px">How I approach engineering</p>
+<ol class="how"><li>Understand the problem before choosing the technology.</li><li>Design systems around reliability, maintainability, and data isolation.</li><li>Measure improvements instead of relying on assumptions.</li><li>Take ownership through delivery and production support.</li></ol></div></div></section>
+
+<section id="work"><div class="wrap rv"><p class="lab">Featured projects</p><h2>Case studies, <em>not screenshots.</em></h2>
+<div class="filters" role="group" aria-label="Filter projects"></div><div class="grid" id="projGrid"></div></div></section>
+
+<section id="skills"><div class="wrap rv"><p class="lab">Toolkit</p><h2>The technologies behind the <em>solutions.</em></h2><div class="skills" id="skillGrid"></div>
+<p class="mut" style="font-size:13px;margin-top:14px">Highlighted items are the ones used most in production.</p></div></section>
+
+<section id="experience"><div class="wrap two rv"><div><p class="lab">Experience</p><h2>Technical ownership, <em>same title.</em></h2></div>
+<div class="tl"><h3 style="font-size:34px">Full Stack Engineer</h3><p class="mut" style="font:13px var(--mono)">Cogniwide · <span id="dates"></span></p>
+<p>Contribute to the development and delivery of production SaaS applications, with a strong focus on Python backend engineering, API design, database performance, asynchronous processing, and AI-powered workflows.</p>
+<ul><li>Build and maintain backend functionality using Python and FastAPI.</li><li>Design and integrate REST APIs and database-backed application workflows.</li><li>Work with PostgreSQL, SQLAlchemy, Redis, and Celery.</li><li>Contribute to multi-tenant application architecture and data isolation.</li><li>Develop real-time functionality and application integrations where required.</li><li>Work with LLM frameworks and AI-oriented application workflows.</li><li>Lead technical planning and coordinate work across a four-member engineering team.</li><li>Participate in troubleshooting, technical decisions, and production delivery.</li></ul>
+<p class="mut" style="font-size:13px">Official title is Full Stack Engineer; technical leadership is part of my responsibilities, not a formal people-management role.</p></div></div></section>
+
+<section id="awards"><div class="wrap rv"><p class="lab">Recognition</p><h2>Awards.</h2><div class="awards">
+<div class="award"><span class="y">2026</span><h3>Star Performer Award</h3><p class="mut" style="margin:0">Recognition for performance and contributions at Cogniwide.</p></div>
+<div class="award"><span class="y">2025</span><h3>Star Rookie of the Year</h3><p class="mut" style="margin:0">Recognition received during my professional career at Cogniwide.</p></div></div></div></section>
+
+<section id="notes"><div class="wrap rv"><p class="lab">Engineering notes</p><h2>Things I've learned while building <em>software.</em></h2>
+<p class="mut">Topics I'm exploring. Nothing below is published yet.</p><ul class="notes" id="notesList"></ul></div></section>
+
+<section id="contact"><div class="wrap rv"><p class="lab">Contact</p><h2>Have a problem <em>worth solving?</em></h2>
+<p style="max-width:40em" class="mut">I'm interested in building reliable backend systems, thoughtful full-stack applications, and practical AI-powered products. You can reach me directly at <strong>mr.saravanakumar2002@gmail.com</strong>, or use the buttons below.</p>
+<div class="cta"><a class="btn p" id="mail" href="mailto:mr.saravanakumar2002@gmail.com">Email Me</a><a class="btn" id="li" href="#" target="_blank" rel="noopener">LinkedIn</a></div>
+</div></section>
+</main>
+<footer><div class="wrap"><div><strong style="color:var(--fg)">Saravanakumar V</strong><br>Python · Backend · Full Stack · AI<br>© <span id="yr"></span></div>
+<div id="flinks"></div><div><em style="font-family:var(--serif);font-size:20px">Build thoughtfully. Ship reliably. Keep learning.</em></div></div></footer>
+
+<dialog id="dlg" aria-labelledby="dtitle"><div class="dh"><span id="dprog" style="position:absolute;left:0;bottom:-1px;height:2px;width:0;background:var(--acc)"></span><span class="mut" style="font:12px var(--mono)" id="dcat"></span><button class="btn" id="dclose" aria-label="Close case study">Close ✕</button></div><div class="db" id="dbody"></div></dialog>
+
+<script>
+/* ===== CONFIG: edit here ===== */
+const CONFIG={email:"mr.saravanakumar2002@gmail.com",linkedin:"https://www.linkedin.com/in/saravanakumar-vetrivel/",
+github:"",            // set to your real GitHub URL to show it
+resume:"",            // set to e.g. "/resume.pdf" once a real file exists
+startDate:"2024-06-10",endDate:null};  // endDate null = Present
+const IMPACT=[ // NOTE: self-reported figures; review before publishing
+["10+","schools","Production school ERP platform.","Contributed to a multi-tenant school ERP platform serving more than ten schools."],
+["1,000+","users","Software built for real usage.","Contributed to a production platform supporting more than 1,000 users."],
+["30%","lower query latency","Database optimization and caching.","Improved query latency through PostgreSQL optimization and Redis caching."],
+["20%","less manual reporting effort","Background processing.","Reduced manual reporting effort through Celery-based background processing."]];
+const SKILLS=[
+["Backend engineering","Python*,FastAPI*,REST APIs*,SQLAlchemy*,Asynchronous programming,Authentication,Authorization,API design,Error handling"],
+["Data and performance","PostgreSQL*,SQL*,Redis*,Query optimization,Caching,Schema design,Multi-tenant data isolation*"],
+["Async and real-time","Celery*,Background jobs*,WebSockets,Event-driven workflows,Task processing"],
+["AI and LLM applications","LangChain,LangGraph,RAG,LLM integration,Tool calling,Document-processing workflows,Natural-language-to-SQL concepts"],
+["Frontend engineering","React*,JavaScript,TypeScript,Vue.js,Responsive interfaces,API integration"],
+["Deployment and tools","Docker,Docker Compose,Nginx,CI/CD,Git"]];
+const NOTES=["Designing tenant isolation in a multi-tenant SaaS application","When to use Celery instead of executing work inside an API request","Improving PostgreSQL query performance with practical optimization techniques","Building safer natural-language-to-SQL workflows with LLMs","Choosing WebSockets for real-time application updates","What technical ownership looks like beyond writing code"];
+/* draft:true hides a project from the page until you remove the flag */
+const P=[
+{n:"01",f:"saas backend",cat:"SaaS Architecture · Backend Engineering",status:"Professional work (sanitized)",title:"A school management platform built for tenant isolation and operational scale.",
+ short:"Multi-tenant ERP serving 10+ schools and 1,000+ users, with ~30% lower query latency.",tech:["FastAPI","PostgreSQL","Redis","Celery","React"],
+ desc:"Contributed to a production school ERP platform supporting multiple schools, administrative workflows, learning-related services, and operational requirements.",
+ problem:"Schools handle sensitive records, so data from one organization or school must never be reachable from another, while the platform still has to be operable as one product.",
+ role:"Backend engineering and technical ownership: implementation, technical planning, troubleshooting and production delivery. This was a team effort; I did not author the entire platform alone.",
+ solution:["Tenant-aware routing resolves the organization and school from the authenticated request.","Database-per-organization isolates each organization's data; schema-per-school separates schools within it.","Redis caching and PostgreSQL optimization reduce query latency; Celery workers take heavy tasks out of requests.","Authentication, authorization and shared services sit in the FastAPI layer."],
+ trade:["Stronger isolation costs more operational complexity (migrations and connection management across many databases and schemas).","Caching speeds reads but demands careful invalidation."],
+ outcome:["Serving 10+ schools and 1,000+ users.","~30% improvement in query latency (PostgreSQL optimization and Redis caching).","~20% reduction in manual reporting effort (background processing)."],
+ flow:[["Client apps","React-based interfaces talk to the backend over REST."],["FastAPI","Validates requests, applies authentication and role-based authorization."],["Tenant router","Chooses the organization database and school schema for the request."],["Org database","One PostgreSQL database per organization."],["School schema","One schema per school inside that database."],["Redis cache","Caches hot reads to cut latency."],["Celery workers","Run reporting and other long tasks asynchronously."]]},
+{n:"02",f:"ai",cat:"AI Engineering · Data Applications",status:"Concept / illustrative workflow",title:"Turning natural-language questions into database queries.",
+ short:"A schema-aware LLM workflow that turns questions into validated, read-only SQL.",tech:["LangChain","LangGraph","Tool calling","PostgreSQL","Python"],
+ desc:"A natural-language data access workflow that helps users express questions in everyday language and translates them into SQL-oriented database interactions.",
+ problem:"Non-technical users need answers from data without writing SQL, but unconstrained LLM-generated SQL is risky.",
+ role:"Illustrative architecture exploration. Safeguards described below are design recommendations, not claims about any verified production system.",
+ solution:["Retrieve schema context relevant to the question.","Prompt the LLM with that schema to generate SQL.","Validate: reject anything other than a single SELECT, check tables and columns against the schema.","Execute with limits and format results in plain language, with clear error messages."],
+ trade:["Read-only database role and least-privilege grants.","Query restrictions: single statement, row limits, timeouts.","Parameterization where applicable.","Trade-off: tighter validation blocks some valid questions."],
+ outcome:["No public demo and no measured outcome are claimed. This page is an architecture exploration."],
+ flow:[["User question","Plain-language input."],["Schema retrieval","Fetch relevant tables, columns and context."],["LLM generates SQL","Schema-aware prompt; LangChain/LangGraph orchestrate steps."],["Validation","Allow-list checks and safety rules before running anything."],["DB execution","Read-only role with timeout and row limit."],["Readable result","Table or summary returned to the user."]]},
+{n:"03",f:"backend",cat:"Backend Engineering · Performance",status:"Illustrative case study",title:"Moving long-running work out of the request cycle.",
+ short:"Celery-based reporting that keeps APIs responsive and cuts manual reporting effort.",tech:["FastAPI","Celery","Redis","PostgreSQL"],
+ desc:"How background processing improves responsiveness and reduces manual reporting work in business applications.",
+ problem:"Reports and exports can run for a long time. Doing that inside a request ties up workers and causes timeouts.",
+ role:"Describes patterns I have used for background processing; it is not a claim that every task shown ran in one specific production application.",
+ solution:["The API accepts the request, enqueues a task and returns a task ID immediately.","Celery workers pull the task from Redis and query the database or generate the file.","Clients poll task status and download the output when ready.","Retries with backoff handle transient failures; failures stay visible in status."],
+ trade:["Added moving parts: broker, workers, monitoring.","Tasks must be idempotent to retry safely.","Worker concurrency must be bounded to protect the database."],
+ outcome:["Approximately 20% reduction in manual reporting effort through Celery-based background processing."],
+ flow:[["User request","Asks for a report or export."],["API","Validates, creates a task, responds right away."],["Task queue","Redis holds pending tasks."],["Worker","Runs the job with retries and timeouts."],["DB / file","Reads data and generates the export."],["Status + download","Task state and output are available to the user."]]},
+{n:"04",f:"realtime backend",cat:"Real-Time Systems · WebSockets",status:"Sanitized, illustrative architecture",title:"Real-time visibility for transport operations.",
+ short:"WebSocket-driven live monitoring built on Redis-backed active-trip state.",tech:["FastAPI","WebSockets","Redis","RBAC"],
+ desc:"A sanitized architecture inspired by real engineering work on real-time location updates and transport workflows.",
+ problem:"Operators need current trip status and location, which polling serves poorly.",
+ role:"Inspired by actual work; implementation specifics are intentionally omitted. The workflow shown is illustrative.",
+ solution:["Location updates are ingested through the API.","Active-trip state lives in Redis for fast reads and writes.","State changes are pushed over WebSockets to authorized dashboards.","Role-based access controls who sees which trips."],
+ trade:["WebSockets keep a connection open, unlike request-response, so connection limits and cleanup matter.","Stale data: show last-updated times and flag silent sources.","Reconnection: clients resync a full snapshot, then resume updates.","Consistency: one source of truth for state; clients never invent it."],
+ outcome:["No metrics claimed. No live locations, personal data, endpoints or internal key names are shown."],
+ flow:[["Location source","Device or service sending updates."],["API ingestion","Validates and authenticates updates."],["Active trip state","Latest state held in Redis."],["WebSocket hub","Pushes changes to subscribed clients."],["Dashboard","Monitoring view with role-based access."]]},
+{n:"05",draft:true,f:"backend",cat:"Business Workflows · Application Engineering",status:"Details to confirm",title:"CR PRO: supporting complex RFP workflows.",short:"A workflow application associated with RFP processes. Specifics pending confirmation.",tech:["Vue.js","FastAPI","WebSockets"],desc:"CR PRO is associated with request-for-proposal workflows.",problem:"RFP processes involve many people, documents and steps. Specific problem statement to be confirmed.",role:"My technical contribution is to be confirmed.",solution:["Workflow stages below are placeholders, not confirmed features."],trade:["To be confirmed."],outcome:["No outcomes claimed until verified."],confirm:["Business context and users","The real RFP stages and user journey","How the real-time document collaboration relates to the RFP workflow","Your contribution, data model and challenges","Verified outcomes"],flow:[["Stage 1 (placeholder)","Replace with the confirmed first RFP stage."],["Stage 2 (placeholder)","Replace with the confirmed second stage."],["Stage 3 (placeholder)","Replace with the confirmed third stage."],["Stage 4 (placeholder)","Replace with the confirmed final stage."]]},
+{n:"06",draft:true,f:"analytics ai",cat:"Analytics · Data Applications",status:"Details to confirm",title:"SUMA: turning application data into answers.",short:"An analytics-oriented application. Specifics pending confirmation.",tech:["Vue.js","LangGraph","OpenAI","Azure AD"],desc:"SUMA is an analytics-oriented project. Implementation details are configurable until confirmed.",problem:"Analytics applications turn raw application data into useful information. SUMA's exact problem is to be confirmed.",role:"My contribution is to be confirmed.",solution:["Data-flow stages below are placeholders, not confirmed components."],trade:["Performance and reliability considerations to be confirmed."],outcome:["No dashboards, KPIs or results claimed until verified."],confirm:["Data sources and processing","Querying and aggregation approach","How results are presented","Your contribution and verified outcomes"],flow:[["Data sources (to confirm)","Replace with the confirmed sources."],["Processing (to confirm)","Replace with the confirmed processing."],["Query & aggregation (to confirm)","Replace with the confirmed approach."],["Presentation (to confirm)","Replace with the confirmed presentation."]]},
+{n:"07",f:"backend",cat:"API Engineering · Application Security",status:"Engineering exploration",title:"API design, authentication and authorization.",short:"How a request is validated, authenticated, authorized and committed safely.",tech:["FastAPI","JWT","RBAC","SQLAlchemy"],desc:"An exploration of REST API design, JWT authentication and role-based access control.",problem:"APIs must be consistent, secure and maintainable as they grow.",role:"Engineering exploration based on concepts I work with; not a single completed project.",solution:["Validate input against a clear contract.","Authenticate with JWT, then authorize by role.","Keep transaction boundaries in the service layer.","Return consistent, safe error responses."],trade:["Fine-grained roles add flexibility but also testing and maintenance cost."],outcome:["No outcomes claimed."],flow:[["Request","Client calls a REST endpoint."],["Validation","Schema checks reject malformed input."],["Authentication","JWT proves who is calling."],["Authorization","Role checks decide what they may do."],["Service + transaction","Business logic commits or rolls back as one unit."],["Response","Consistent success or error format."]]},
+{n:"08",f:"backend saas",cat:"Database Engineering · Performance",status:"Deep dive, figures to confirm",title:"PostgreSQL optimization and Redis caching.",short:"The work behind the reported ~30% query-latency improvement.",tech:["PostgreSQL","Redis","SQLAlchemy"],desc:"A deep dive into the optimization work associated with the ~30% query-latency improvement.",problem:"Baseline and affected queries to be documented.",role:"Contributed to PostgreSQL optimization and Redis caching.",solution:["Analyze slow queries, then adjust indexing and queries.","Cache suitable reads in Redis.","Plan cache invalidation to keep data consistent."],trade:["Caching trades freshness for speed; invalidation must be designed."],outcome:["Approximately 30% lower query latency (self-reported; method and baseline to be documented)."],confirm:["Baseline and measurement method","Actual indexes and query changes","Caching and invalidation strategy"],flow:[["Baseline","Measure current latency first."],["Query analysis","Find the slowest, most frequent queries."],["Indexing / plans","Confirm what was changed (to confirm)."],["Redis cache","Serve repeat reads quickly."],["Invalidation","Keep cached data correct."],["Re-measure","Compare against the baseline."]]},
+{n:"09",f:"leadership",cat:"Engineering Leadership · Delivery",status:"Process case study",title:"Technical ownership beyond writing code.",short:"Leading technical planning for a four-member team, from requirements to production support.",tech:["Planning","Code review","Delivery"],desc:"How I take technical ownership while staying hands-on. My title remains Full Stack Engineer.",problem:"Good delivery needs clear requirements, plans and someone owning blockers.",role:"Led technical planning and coordination for a four-member engineering team. No formal people-management authority.",solution:["Break requirements into tasks and plan the technical approach.","Coordinate work, review code and resolve blockers.","Support production after delivery."],trade:["Staying hands-on while coordinating needs careful time management."],outcome:["No team metrics or dates claimed."],flow:[["Requirements","Understand the problem and constraints."],["Technical planning","Choose the approach and split the work."],["Implementation","Build while coordinating the team."],["Review & testing","Code reviews and verification."],["Delivery","Ship to production."],["Production support","Troubleshoot and follow up."]]}];
+P[1].sim=["How many orders were placed last month?","SELECT COUNT(*) FROM orders WHERE created_at >= date_trunc('month', now()) - interval '1 month' AND created_at < date_trunc('month', now());","A sample count would be shown here in plain language."];
+const SHOW=P.filter(p=>!p.draft);
+
+/* ===== helpers ===== */
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
+const el=(t,c,h)=>{const e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e};
+
+/* ===== static content ===== */
+const yrs=Math.max(2,Math.floor((Date.now()-new Date(CONFIG.startDate))/31557600000));
+$("[data-years]").textContent=yrs+"+";
+const fmt=d=>new Date(d).toLocaleString("en",{month:"long",year:"numeric"});
+$("#dates").textContent=fmt(CONFIG.startDate)+" – "+(CONFIG.endDate?fmt(CONFIG.endDate):"Present");
+$("#yr").textContent=new Date().getFullYear();
+$("#li").href=CONFIG.linkedin;
+$("#flinks").innerHTML=`<a href="${CONFIG.linkedin}" target="_blank" rel="noopener">LinkedIn</a><a href="mailto:${CONFIG.email}">Email</a>`+(CONFIG.github?`<a href="${CONFIG.github}" target="_blank" rel="noopener">GitHub</a>`:"");
+if(CONFIG.resume){const b=$("#resumeBtn");b.href=CONFIG.resume;b.hidden=false}
+$("#impactGrid").innerHTML=IMPACT.map(i=>`<div><div class="big">${i[0]}</div><h3>${i[1]}</h3><p>${i[2]}<br>${i[3]}</p></div>`).join("");
+$("#skillGrid").innerHTML=SKILLS.map(s=>`<div><h3>${s[0]}</h3>${s[1].split(",").map(t=>t.endsWith("*")?`<span class="tag core">${t.slice(0,-1)}</span>`:`<span class="tag">${t}</span>`).join("")}</div>`).join("");
+$("#notesList").innerHTML=NOTES.map(n=>`<li><span>${n}</span><span class="s">PLANNED · NOT PUBLISHED</span></li>`).join("");
+
+/* ===== hero diagram ===== */
+const HN=[["Clients",200,40,"React and other clients call the API."],["FastAPI",200,130,"REST and WebSocket API: JWT auth, RBAC, tenant-aware routing."],["PostgreSQL",90,225,"Organization databases with school schemas."],["Redis",200,225,"Caching, broker and active state."],["LLM flow",310,225,"LangChain/LangGraph workflows with tool calling."],["Celery",310,285,"Background workers for reports and long jobs."]];
+$("#svgNodes").innerHTML=HN.map((n,i)=>`<g tabindex="0" role="button" aria-label="${n[0]}" data-i="${i}" style="cursor:pointer"><rect x="${n[1]-45}" y="${n[2]-18}" width="90" height="36" rx="6" fill="#0c0d0c" stroke="#3a403a"/><text x="${n[1]}" y="${n[2]+4}" fill="#f1efe8">${n[0]}</text></g>`).join("");
+$("#svgNodes").addEventListener("click",e=>{const g=e.target.closest("g[data-i]");if(!g)return;$("#heroNote").textContent=HN[g.dataset.i][3];$$("#svgNodes rect").forEach(r=>r.setAttribute("stroke","#3a403a"));g.querySelector("rect").setAttribute("stroke","#c6ff3d")});
+$("#svgNodes").addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();e.target.dispatchEvent(new MouseEvent("click",{bubbles:true}))}});
+
+const AN=[["User input","A question in everyday language."],["Context","Relevant schema or documents are retrieved to ground the model."],["LLM","Generates a query or answer; tool calling via LangChain/LangGraph."],["Validation","Rules check the output before anything runs."],["Response","A readable answer returned to the user."]];
+$("#aiSvg").innerHTML='<path class="pulse" d="M200 48V72M200 108V132M200 168V192M200 228V252" stroke="#c6ff3d" stroke-width="1.5" fill="none"/><g fill="#c6ff3d" class="pk"><circle r="4"><animateMotion dur="2.4s" repeatCount="indefinite" path="M200 40V260"/></circle></g><g font-family="JetBrains Mono,monospace" font-size="12" text-anchor="middle">'+AN.map((n,i)=>`<g tabindex="0" role="button" aria-label="${n[0]}" data-a="${i}" style="cursor:pointer"><rect x="140" y="${12+i*60}" width="120" height="36" rx="6" fill="#0c0d0c" stroke="#3a403a"/><text x="200" y="${34+i*60}" fill="#f1efe8">${n[0]}</text></g>`).join("")+'</g>';
+$("#aiSvg").addEventListener("click",e=>{const g=e.target.closest("g[data-a]");if(g)$("#heroNote").textContent=AN[g.dataset.a][1]});
+$("#aiSvg").addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();e.target.dispatchEvent(new MouseEvent("click",{bubbles:true}))}});
+$$(".tg button").forEach(b=>b.onclick=()=>{const a=b.dataset.v==="a";$$(".tg button").forEach(x=>x.setAttribute("aria-pressed",x===b));$("#saasSvg").style.display=a?"none":"block";$("#aiSvg").style.display=a?"block":"none";$("#heroNote").textContent=a?"Click a stage to see its purpose.":"Select a component to see how it fits."});
+
+/* ===== projects ===== */
+const grid=$("#projGrid"),fl=$(".filters");
+[["all","All"],["backend","Backend"],["saas","SaaS"],["ai","AI / LLM"],["analytics","Analytics"],["realtime","Real-Time"],["leadership","Leadership"]]
+.filter(([k])=>k==="all"||SHOW.some(p=>p.f.split(" ").includes(k)))
+.forEach(([k,l],i)=>{const b=el("button","",l);b.setAttribute("aria-pressed",i===0);b.onclick=()=>{$$(".filters button").forEach(x=>x.setAttribute("aria-pressed",x===b));$$(".card").forEach(c=>{const show=k==="all"||c.dataset.f.split(" ").includes(k);c.hidden=!show;if(show){c.style.animation="none";c.offsetWidth;c.style.animation="up .5s"}})};fl.append(b)});
+SHOW.forEach((p,i)=>{const c=el("article","card",`<span class="no">PROJECT ${p.n}</span><span class="badge">${p.status}</span><span class="mut" style="font:12px var(--mono)">${p.cat}</span><h3>${p.title}</h3><p>${p.short}</p><div>${p.tech.map(t=>`<span class="tag">${t}</span>`).join("")}</div><button class="btn" data-i="${i}">Read case study →</button>`);c.dataset.f=p.f;c.dataset.n=p.n;grid.append(c)});
+grid.addEventListener("pointermove",e=>{const c=e.target.closest(".card");if(c){const r=c.getBoundingClientRect();c.style.setProperty("--mx",e.clientX-r.left+"px");c.style.setProperty("--my",e.clientY-r.top+"px")}});
+
+/* ===== case study dialog ===== */
+const dlg=$("#dlg");
+const flowHTML=(f,id)=>`<div class="flow" id="${id}">${f.map((n,i)=>(i?'<span class="arr">→</span>':'')+`<button class="node" aria-pressed="${i===0}" data-k="${i}">${n[0]}</button>`).join("")}</div><p class="note" id="${id}n">${f[0][1]}</p>`;
+const ul=a=>"<ul>"+a.map(x=>`<li>${x}</li>`).join("")+"</ul>";
+let cur=0;
+function openCS(i){const p=SHOW[i];cur=i;
+$("#dcat").textContent=`PROJECT ${p.n} · ${p.status}`;
+$("#dbody").innerHTML=`<h2 id="dtitle">${p.title}</h2><p class="mut">${p.desc}</p><h3>Problem &amp; why it mattered</h3><p>${p.problem}</p><h3>My role</h3><p>${p.role}</p><h3>Architecture &amp; data flow (plays automatically, click any step)</h3>${flowHTML(p.flow,"fl")}<h3>Solution</h3>${ul(p.solution)}<h3>Decisions, trade-offs &amp; safeguards</h3>${ul(p.trade)}<h3>Outcome &amp; evidence</h3>${ul(p.outcome)}<h3>Technologies</h3><div>${p.tech.map(t=>`<span class="tag">${t}</span>`).join("")}</div>${p.sim?`<h3>Local simulation (no database, sample data)</h3><button class="btn" id="simBtn">▶ Run sample question</button><pre class="sim" id="simOut" aria-live="polite"></pre>`:""}<h3>Links</h3><p class="mut">Case study only. No public demo or repository is available, and proprietary details are intentionally omitted.</p>${p.confirm?`<h3>Needs your confirmation</h3>${ul(p.confirm)}`:""}<h3>Previous / next case study</h3><div class="pn"><button class="btn" data-go="-1">← Previous</button><button class="btn" data-go="1">Next →</button></div>`;
+clearInterval(window.tm);
+$("#fl").addEventListener("click",ev=>{const n=ev.target.closest(".node");if(!n)return;clearInterval(window.tm);$$("#fl .node").forEach(x=>x.setAttribute("aria-pressed",x===n));$("#fln").textContent=p.flow[n.dataset.k][1]});
+if(!dlg.open)dlg.showModal();
+dlg.scrollTop=0;$("#dprog").style.width="0";
+if(!matchMedia("(prefers-reduced-motion:reduce)").matches){let k=0;window.tm=setInterval(()=>{k=(k+1)%p.flow.length;$$("#fl .node").forEach(x=>x.setAttribute("aria-pressed",+x.dataset.k===k));$("#fln").textContent=p.flow[k][1]},2200)}
+if(p.sim)$("#simBtn").onclick=()=>{const o=$("#simOut"),L=["1 Question: "+p.sim[0],"2 Schema context: sample tables only","3 Generated SQL: "+p.sim[1],"4 Validation: single SELECT, allowed tables only: PASS","5 Execution: SIMULATED, nothing is run","6 Answer: "+p.sim[2]];o.textContent="";L.forEach((t,k)=>setTimeout(()=>o.textContent+=t+"\n",k*650))}}
+grid.addEventListener("click",e=>{const b=e.target.closest("button[data-i]");if(b)openCS(+b.dataset.i)});
+$("#dbody").addEventListener("click",e=>{const g=e.target.closest("[data-go]");if(g){openCS((cur+ +g.dataset.go+SHOW.length)%SHOW.length);dlg.scrollTop=0}});
+dlg.addEventListener("scroll",()=>{$("#dprog").style.width=(dlg.scrollTop/Math.max(1,dlg.scrollHeight-dlg.clientHeight)*100)+"%"});
+dlg.addEventListener("close",()=>clearInterval(window.tm));
+$("#dclose").onclick=()=>dlg.close();
+dlg.addEventListener("click",e=>{if(e.target===dlg)dlg.close()});
+
+/* ===== nav ===== */
+const bg=$("#burger"),lk=$("#links");
+bg.onclick=()=>{const o=lk.classList.toggle("open");bg.setAttribute("aria-expanded",o)};
+lk.addEventListener("click",e=>{if(e.target.tagName==="A"){lk.classList.remove("open");bg.setAttribute("aria-expanded",false)}});
+const secs=["home","about","work","skills","experience","contact"].map(id=>document.getElementById(id));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)$$(".links a").forEach(a=>a.classList.toggle("on",a.hash==="#"+e.target.id))}),{rootMargin:"-45% 0px -50% 0px"});
+secs.forEach(s=>io.observe(s));
+
+/* ===== reveal, progress bar, counters ===== */
+const rv=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");rv.unobserve(e.target)}}),{threshold:.08});
+$$(".rv").forEach(x=>rv.observe(x));
+addEventListener("scroll",()=>{const h=document.documentElement;$("#prog").style.width=(h.scrollTop/Math.max(1,h.scrollHeight-h.clientHeight)*100)+"%"},{passive:true});
+if(!matchMedia("(prefers-reduced-motion:reduce)").matches){
+const co=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;co.unobserve(e.target);
+$$("#impactGrid .big").forEach(b=>{const t=b.textContent,m=t.match(/[\d,]+/)[0],n=parseInt(m.replace(/,/g,"")),s=t.replace(m,""),t0=performance.now();
+(function f(now){const r=Math.min(1,(now-t0)/1400),v=Math.round(n*(1-Math.pow(1-r,3)));b.textContent=(m.includes(",")?v.toLocaleString("en"):v)+s;if(r<1)requestAnimationFrame(f)})(t0)})}),{threshold:.4});
+co.observe($("#impactGrid"))}
+</script></body></html>
